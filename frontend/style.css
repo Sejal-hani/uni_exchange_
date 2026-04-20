@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: #f0f4f8; height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 74, 173, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border-top: 6px solid #004aad;
+}
+
+.auth-card h2 { color: #004aad; font-size: 28px; text-align: center; margin-bottom: 5px; }
+.auth-card p { color: #64748b; text-align: center; margin-bottom: 25px; font-size: 14px; }
+
+input {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    border: 1px solid #d1d9e0; border-radius: 6px; outline: none;
+}
+
+button.btn-blue {
+    width: 100%; padding: 12px; background: #004aad; color: white;
+    border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer;
+}
+
+button.btn-blue:hover { background: #003580; }
+
+.toggle-link { text-align: center; margin-top: 20px; font-size: 14px; color: #64748b; }
+.toggle-link span { color: #004aad; font-weight: bold; cursor: pointer; }

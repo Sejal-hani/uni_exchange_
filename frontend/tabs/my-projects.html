@@ -1,0 +1,67 @@
+<!-- FILE: tabs/my-projects.html -->
+
+<div class="my-projects-header">
+    <h1>My Projects</h1>
+    <!-- This button will be styled by the .btn-blue class in your CSS -->
+    <button class="btn-blue" onclick="openProjectModal()">+ Post Project</button>
+</div>
+
+<!-- Grid where cards will appear. The CSS will make these sit side-by-side -->
+<div id="my-grid" class="job-grid-container">
+    <!-- Projects will be dynamically inserted here by dashboard-script.js -->
+</div>
+
+<!-- ============================================= -->
+<!-- THE POP-UP FORM (MODAL)                       -->
+<!-- ============================================= -->
+<div id="project-modal-overlay">
+    <div id="project-modal-card">
+        <span class="modal-close-btn" onclick="closeProjectModal()">&times;</span>
+        
+        <h2 style="color:#004aad; text-align:center; margin-bottom: 5px;">Post New Project</h2>
+        <p style="text-align:center; color:#64748b; font-size:13px; margin-bottom:20px;">Fill in the details to find a freelancer.</p>
+        
+        <form id="create-project-form" onsubmit="handleProjectSubmit(event)">
+            <!-- Title -->
+            <input type="text" id="p-title" placeholder="Project Title (e.g. Help with Lab Report)" required>
+            
+            <!-- Category (Populated from DB) -->
+            <select id="p-category" required>
+                <option value="" disabled selected>Select Category...</option>
+            </select>
+
+            <!-- Description -->
+            <textarea id="p-desc" placeholder="Details, requirements, and contact info..." rows="3" required></textarea>
+
+            <!-- Budget -->
+            <input type="number" id="p-budget" placeholder="Budget (₹)" min="0" required>
+            
+            <!-- Deadline (DATE + TIME) -->
+            <div style="margin-bottom: 15px;">
+                <label style="display:block; font-size:12px; color:#64748b; margin-bottom:5px; margin-left:5px;">Set Deadline (Date & Time)</label>
+                <input type="datetime-local" id="p-deadline" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn-blue" type="submit">Publish Now</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- ============================================= -->
+<!-- THE PROPOSALS LIST MODAL (NEW)               -->
+<!-- ============================================= -->
+<div id="proposals-modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:3000; align-items:center; justify-content:center;">
+    <div id="proposals-card" style="background:white; padding:30px; border-radius:12px; width:90%; max-width:500px; border-top:6px solid #004aad; position:relative;">
+        <span class="modal-close-btn" onclick="closeProposalsModal()" style="float:right; cursor:pointer; font-size:24px;">&times;</span>
+        
+        <h2 style="color:#004aad; margin-bottom:5px;">Project Proposals</h2>
+        <p style="color:#64748b; font-size:14px; margin-bottom:20px;">Review bids and accept a freelancer.</p>
+
+        <!-- This is where JS will inject the list of bidders -->
+        <div id="proposals-list" style="max-height:300px; overflow-y:auto;">
+            <p style="text-align:center; color:#94a3b8;">Loading proposals...</p>
+        </div>
+    </div>
+</div>

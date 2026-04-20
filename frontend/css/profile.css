@@ -1,0 +1,108 @@
+/* Container to center the profile card */
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* The Profile Card styling - matching your Login Auth-Card */
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 74, 173, 0.1);
+    border-top: 6px solid #004aad;
+}
+
+/* The Avatar Circle */
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background: #f1f5f9;
+    color: #004aad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+    line-height: 80px;
+}
+
+/* Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stat-box {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #004aad;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-blue-profile {
+    width: 100%;
+    padding: 12px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-blue-profile:hover {
+    background: #003580;
+}
+
+.btn-danger-outline {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: #ef4444;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn-danger-outline:hover {
+    background: #fee2e2;
+}
+
+.profile-hr {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    font-size: 14px;
+    outline: none;
+}
+input[type="text"]:focus {
+    border-color: #004aad;
+}

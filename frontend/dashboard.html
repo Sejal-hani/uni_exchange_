@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uni Exchange - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="css/my-projects.css">
+    <link rel="stylesheet" href="css/profile.css"> 
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left"><h2 class="logo-text">Uni Exchange</h2></div>
+        <div class="nav-center">
+            <button class="nav-item active" onclick="loadTab('browse', this)">Browse</button>
+            <button class="nav-item" onclick="loadTab('my-projects', this)">My Projects</button>
+            <button class="nav-item" onclick="loadTab('wallet', this)">Wallet</button>
+            <!-- Add this to your sidebar inside dashboard.html -->
+<button class="nav-item" onclick="loadTab('my-bids', this)">My Bids</button>
+        </div>
+        <div class="nav-right">
+            <!-- Ensure this span exists for the JS to target -->
+            <span id="userName" style="margin-right:15px; color:#64748b; font-weight:600;"></span>
+            <button class="nav-item" onclick="loadTab('profile', this)">Profile</button>
+        </div>
+    </header>
+    <main id="main-content" class="content-wrapper"></main>
+    <script src="dashboard-script.js"></script>
+</body>
+</html>

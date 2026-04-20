@@ -1,0 +1,45 @@
+<div class="profile-container">
+    <div class="profile-card">
+        <!-- VIEW MODE -->
+        <div id="profile-view">
+            <div style="text-align: center; margin-bottom: 25px;">
+                <div class="avatar-circle"><span id="p-avatar">U</span></div>
+                <h2 id="p-full">Loading...</h2>
+                <p id="p-email" style="color:#64748b"></p>
+                <button onclick="toggleEdit()" style="background:none; border:1px solid #004aad; color:#004aad; padding:5px 15px; border-radius:20px; cursor:pointer; font-size:12px; margin-top:10px;">Edit Profile</button>
+            </div>
+
+            <hr class="profile-hr">
+            <div style="display: grid; gap: 10px; font-size: 14px;">
+                <div style="display: flex; justify-content: space-between;"><span>College ID</span><span id="p-id" style="font-weight:bold;"></span></div>
+                <div style="display: flex; justify-content: space-between;"><span>Phone(s)</span><span id="p-phones" style="font-weight:bold;"></span></div>
+            </div>
+            <hr class="profile-hr">
+            
+            <div class="stats-grid">
+                <div class="stat-box"><div id="p-projects" class="stat-value">0</div><div class="stat-label">Projects</div></div>
+                <div class="stat-box"><div id="p-proposals" class="stat-value">0</div><div class="stat-label">Proposals</div></div>
+                <div class="stat-box"><div id="p-rating" class="stat-value">0.0</div><div class="stat-label">Rating</div></div>
+            </div>
+
+            <button class="btn-blue-profile" onclick="logout()" style="margin-top:20px;">Logout</button>
+            <button class="btn-danger-outline" onclick="deleteAccount()">Delete Account</button>
+        </div>
+
+        <!-- EDIT MODE (Hidden by default) -->
+        <div id="profile-edit" style="display:none;">
+            <h3 style="color:#004aad; margin-bottom:20px;">Edit Information</h3>
+            <label style="font-size:12px; color:#64748b;">First Name</label>
+            <input type="text" id="edit-fname" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ddd; border-radius:6px;">
+            
+            <label style="font-size:12px; color:#64748b;">Last Name</label>
+            <input type="text" id="edit-lname" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ddd; border-radius:6px;">
+            
+            <label style="font-size:12px; color:#64748b;">Phone Numbers (comma separated)</label>
+            <input type="text" id="edit-phones" style="width:100%; padding:10px; margin-bottom:20px; border:1px solid #ddd; border-radius:6px;">
+            
+            <button class="btn-blue-profile" onclick="saveProfile()">Save Changes</button>
+            <button class="btn-danger-outline" onclick="toggleEdit()" style="border-color:#64748b; color:#64748b;">Cancel</button>
+        </div>
+    </div>
+</div>
